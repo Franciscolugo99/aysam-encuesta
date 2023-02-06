@@ -16,8 +16,18 @@
 </head>
 
 <body>
-
-
+  <div class="burbujas">
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+  </div>
   <div class="container" id="general">
     <div id="Imgleft">
       <div id="superior">
@@ -25,39 +35,38 @@
         <h1 class="text-center animate__animated animate__zoomIn" id="titulo">Encuesta de Satisfacción</h1>
       </div>
     </div>
-    <br>
-    <section class="row">
-      <div class="col-md-12">
-        <div class="parrafos">
-          <p class="text-center animate__animated animate__rubberBand" >Aguas</p>
-          <p class="text-center animate__animated animate__rubberBand" id="men" >Mendocinas</p>
-        </div>
-
-      </div>
-    </section>
     <div id="cuadro">
       <form class="row g-3 needs-validation" action="conex.php" method="POST" id="inicio" novalidate>
+        <div class="col-md-12">
+          <div class="parrafos">
+            <p class="text-center animate__animated animate__rubberBand">Aguas</p>
+            <p class="text-center animate__animated animate__rubberBand" id="men">Mendocinas</p>
+          </div>
+
+        </div>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Nombre</label>
-          
+
           <input type="text" name="nombre" class="form-control animate__animated animate__bounceIn "
-            id="validationCustom01" placeholder="nombre"  minlength="3" maxlength="30"  required pattern="[A-Za-z]*" />
+            id="validationCustom01" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="nombre"
+            minlength="3" maxlength="30" required pattern="[A-Za-z]*" />
           <div class="valid-feedback">
             Correcto!
           </div>
           <div class="invalid-feedback">
-            Por favor, ingrese un nombre sin números espacios o *!/.
+            Por favor, ingrese un nombre sin espacios o *!/.
           </div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">Apellido</label>
+          <label for="validationCustom02" class="form-label">Apellido</label>
           <input type="text" name="apellido" class="form-control animate__animated animate__bounceIn "
-            id="validationCustom01" placeholder="apellido" minlength="3" maxlength="30" required pattern="[A-Za-z]*" />
+            id="validationCustom02" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="apellido"
+            minlength="3" maxlength="30" required pattern="[A-Za-z]*" />
           <div class="valid-feedback">
             Correcto!
           </div>
           <div class="invalid-feedback">
-            Por favor, ingrese un apellido sin números espacios o *!/.
+            Por favor, ingrese un apellido sin espacios o *!/.
           </div>
         </div>
         <div class="col-md-4">
@@ -65,27 +74,27 @@
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend"><i class="fa-regular fa-envelope"></i></span>
             <input type="email" name="email" class="form-control animate__animated animate__bounceIn"
-              id="validationCustomEmail" placeholder="usuario@aysam.com.ar" aria-describedby="inputGroupPrepend"
-              required>
-              <div class="valid-feedback">
-                Correcto!
-              </div>
+              id="validationCustomEmail" onkeyup="javascript:this.value=this.value.toUpperCase();"
+              placeholder="usuario@aysam.com.ar" aria-describedby="inputGroupPrepend" required>
+            <div class="valid-feedback">
+              Correcto!
+            </div>
             <div class="invalid-feedback">
               Por favor, ingrese un correo válido.
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom04" class="form-label">Lugar de trabajo</label>
+          <label for="validationCustom04" class="form-label">Departamento/Área</label>
           <select class="form-select animate__animated animate__bounceIn" name="departamento" id="validationCustom04"
             required>
             <option selected disabled value="">Opción...</option>
-            <option value="CASA CENTRAL">ALTO GODOY</option>
-            <option value="CASA CENTRAL">CASA CENTRAL</option>
+            <option value="Casa Central">ALTO GODOY</option>
+            <option value="Casa Central">CASA CENTRAL</option>
             <option value="ESTABLECIMIENTO POTABILIZADOR BENEGAS">ESTABLECIMIENTO POTABILIZADOR BENEGAS</option>
             <option value="ESTABLECIMIENTO POTABILIZADOR LUJAN I">ESTABLECIMIENTO POTABILIZADOR LUJAN I</option>
             <option value="ESTABLECIMIENTO POTABILIZADOR LUJAN II">ESTABLECIMIENTO POTABILIZADOR LUJAN II</option>
-            <option value="ESTABLECIMIENTO POTABILIZADOR POTRERILLOS">ESTABLECIMIENTO POTABILIZADOR POTRERILLOS </option>
+            <option value="ESTABLECIMIENTO POTABILIZADOR POTRERILLOS">ESTABLECIMIENTO POTABILIZADOR POTRERILLOS</option>
             <option value="OFICINA COMERCIAL LAS HERAS">OFICINA COMERCIAL LAS HERAS</option>
             <option value="OFICINA COMERCIAL SAN CARLOS">OFICINA COMERCIAL SAN CARLOS</option>
             <option value="OFICINA COMERCIAL UGARTECHE">OFICINA COMERCIAL UGARTECHE</option>
@@ -98,6 +107,7 @@
             <option value="OFICINA TUNUYAN">OFICINA TUNUYÁN</option>
             <option value="OFICINA USPALLATA">OFICINA USPALLATA</option>
             <option value="OFICINA SAN RAFAEL">OFICINA SAN RAFAEL</option>
+            <option value="UNIDAD OPERATIVA SAN RAFAEL">UNIDAD OPERATIVA SAN RAFAEL</option>
             <option value="UNIDAD OPERATIVA LUJAN">UNIDAD OPERATIVA LUJAN</option>
             <option value="OFICINA COMERCIAL LAS HERAS">UNIDAD OPERATIVA LAS HERAS</option>
             <option value="UNIDAD OPERATIVA GUAYMALLEN">UNIDAD OPERATIVA GUAYMALLÉN</option>
@@ -107,59 +117,69 @@
             Por favor, seleccione un departamento.
           </div>
         </div>
-        <label for="validationCustom05" class="form-label">¿Cómo calificaría su experiencia respecto al soporte recibido
+        <label for="face-rating" class="form-label">¿Cómo calificaría su experiencia respecto al soporte recibido
           a
           través de Sistemas?</label>
         <div class="col-md-2">
-          <select class="form-select animate__animated animate__bounceIn" name="conformidad" id="validationCustom05"
-            required>
-            <option selected disabled value="">Opción...</option>
-            <option value="Excelente">Excelente</option>
-            <option value="Buena">Buena</option>
-            <option value="Regular">Regular</option>
-            <option value="Mala">Mala</option>
-          </select>
-          <div class="invalid-feedback">
-            Por favor, elija una opción.
+          <div class="fr__face" role="img" aria-label="Straight face">
+            <div class="fr__face-right-eye" data-right></div>
+            <div class="fr__face-left-eye" data-left></div>
+            <div class="fr__face-mouth-lower" data-mouth-lower></div>
+            <div class="fr__face-mouth-upper" data-mouth-upper></div>
           </div>
+          <input class="fr__input" name="conformidad" id="face-rating" type="range" value="3" min="1" max="5" step="1"
+            onchange="document.getElementById('outvol').value=value">
+          <output class="fr__output" id="outvol" name="outvol" for="conformidad"></output>
         </div>
 
         <!--  Comentarios  -->
-        
+
         <section class="row">
           <div class="col-md-12">
             <br>
             <br>
             <h3 class=" animate__animated animate__pulse">Comentarios.</h3>
-            <p></p>
           </div>
         </section>
         <section class="row">
           <div class="col-md-12">
             <div class="form-floating">
               <textarea class="form-control animate__animated animate__bounceIn" name="commentario"
-                id="floatingTextarea2" style="height: 100px"></textarea>
+                id="floatingTextarea2" onkeyup="javascript:this.value=this.value.toUpperCase();"
+                style="height: 100px"></textarea>
               <label for="floatingTextarea2">Deja un comentario aquí (Opcional)</label>
             </div>
           </div>
         </section>
         <section class="row">
-          <div class="col-md-13">
-            <button  type="submit" class="btn btn-info animate__animated animate__tada" ondblclick="location.href=exit.html">Enviar Encuesta</button>
-           
+          <div class="buttons">
+            <button type="submit" class="blob-btn" ondblclick="location.href=exit.html">Enviar Encuesta
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
           </div>
         </section>
       </form>
     </div>
-    
-  <div id="inferior">
-    <img src="img/—Pngtree—water drop decoration painting cartoon_5455417.png" class=" animate__animated animate__heartBeat	" id="imagen2" s>
+
+    <div id="inferior">
+      <img src="img/—Pngtree—water drop decoration painting cartoon_5455417.png"
+        class=" animate__animated animate__heartBeat	" id="imagen2" s>
+    </div>
   </div>
-  </div>
 
 
-    <script src="servidor.js"></script>
+  <script src="servidor.js"></script>
+  <script src="script.js"></script>
 
-  </body>
+
+
+</body>
 
 </html

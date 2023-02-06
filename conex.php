@@ -13,17 +13,20 @@ if (!$conn) {
 
 }
 
-//recuperar las variables
+//recuperar las variables;
+//magia
+$ip = getenv('REMOTE_ADDR');
+$navegador = getenv('HTTP_USER_AGENT');
 $nombre = $_POST ['nombre'];
 $apellido = $_POST ['apellido'];
 $correo = $_POST ['email'];
 $departamento = $_POST ['departamento'];
 $conformidad = $_POST ['conformidad'];
 $comentario = $_POST ['commentario'];
-  
 
-$sql = "INSERT INTO user (nombre, apellido, correo, departamento, conformidad, comentario)
-VALUES ('$nombre','$apellido', '$correo', '$departamento','$conformidad','$comentario')";
+
+$sql = "INSERT INTO user (nombre, apellido, correo, departamento, conformidad, comentario, ip_user)
+VALUES ('$nombre','$apellido', '$correo', '$departamento','$conformidad','$comentario','$ip')";
 
 if (mysqli_query($conn, $sql)) {
   //redirecciono a la pagina de exit.html
@@ -35,5 +38,3 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
-
-

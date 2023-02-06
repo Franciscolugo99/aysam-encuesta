@@ -1,8 +1,7 @@
 <?php
 /*
 * Script: Cargar datos de lado del servidor con PHP y MySQL
-* Autor: Marco Robles
-* Team: Códigos de Programación
+
 */
 
 //Conectar con el servidor
@@ -21,7 +20,7 @@ if (!$conn) {
 
 
 /* Un arreglo de las columnas a mostrar en la tabla */
-$columns = ['nombre', 'apellido', 'correo', 'departamento', 'conformidad', 'comentario', 'fecha_encuesta'];
+$columns = ['id_user','nombre', 'apellido', 'correo', 'departamento', 'conformidad', 'comentario', 'fecha_encuesta'];
 
 /* Nombre de la tabla */
 $table = "user";
@@ -90,6 +89,7 @@ $output['paginacion'] = '';
 if ($num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         $output['data'] .= '<tr>';
+        $output['data'] .= '<td  class="table-light">' . $row['id_user'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['nombre'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['apellido'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['correo'] . '</td>';
