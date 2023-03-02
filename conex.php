@@ -23,10 +23,12 @@ $correo = $_POST ['email'];
 $departamento = $_POST ['departamento'];
 $conformidad = $_POST ['conformidad'];
 $comentario = $_POST ['commentario'];
+$pc = $_POST ['pc'];
+$errores = $_POST['errores'];
 
 
-$sql = "INSERT INTO user (nombre, apellido, correo, departamento, conformidad, comentario, ip_user)
-VALUES ('$nombre','$apellido', '$correo', '$departamento','$conformidad','$comentario','$ip')";
+$sql = "INSERT INTO user (nombre, apellido, correo, departamento, conformidad, comentario, ip_user, pc ,errores)
+VALUES ('$nombre','$apellido', '$correo', '$departamento','$conformidad','$comentario','$ip', '$pc','$errores')";
 
 if (mysqli_query($conn, $sql)) {
   //redirecciono a la pagina de exit.html

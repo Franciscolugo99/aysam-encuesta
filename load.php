@@ -20,7 +20,7 @@ if (!$conn) {
 
 
 /* Un arreglo de las columnas a mostrar en la tabla */
-$columns = ['id_user','nombre', 'apellido', 'correo', 'departamento', 'conformidad', 'comentario', 'fecha_encuesta'];
+$columns = ['id_user','nombre', 'apellido', 'correo', 'departamento', 'conformidad', 'comentario', 'fecha_encuesta', 'pc' , 'errores'];
 
 /* Nombre de la tabla */
 $table = "user";
@@ -96,6 +96,8 @@ if ($num_rows > 0) {
         $output['data'] .= '<td  class="table-light">' . $row['departamento'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['conformidad'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['comentario'] . '</td>';
+        $output['data'] .= '<td  class="table-light">' . $row['pc'] . '</td>';
+        $output['data'] .= '<td  class="table-light">' . $row['errores'] . '</td>';
         $output['data'] .= '<td  class="table-light">' . $row['fecha_encuesta'] . '</td>';
         $output['data'] .= '</tr  class="table-light">';
     }

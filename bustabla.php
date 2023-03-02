@@ -71,7 +71,9 @@
                             <th class="table-info">Departamento / Area</th>
                             <th class="table-info">Experiencia</th>
                             <th class="table-info">Comentarios</th>
-                            <th class="table-info">Fecha</th>
+                            <th class="table-info">PC</th>
+                            <th class="table-info">ERRORES</th>
+                            <th class="table-info">PC</th>
                         </thead>
 
                         <!-- El id del cuerpo de la tabla. -->

@@ -66,6 +66,18 @@
             Correcto!
           </div>
           <div class="invalid-feedback">
+            Por favor, ingrese un numero de pc sin espacios o *!/.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom02" class="form-label">Número de PC</label>
+          <input type="text" name="pc" class="form-control animate__animated animate__bounceIn " id="validationCustom02"
+            onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="PC000" minlength="3" maxlength="6"
+            required />
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
             Por favor, ingrese un apellido sin espacios o *!/.
           </div>
         </div>
@@ -85,11 +97,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom04" class="form-label">Departamento/Área</label>
+          <label for="validationCustom04" class="form-label">Seleccione su departamento/área</label>
           <select class="form-select animate__animated animate__bounceIn" name="departamento" id="validationCustom04"
             required>
             <option selected disabled value="">Opción...</option>
-            <option value="Casa Central">ALTO GODOY</option>
+            <option value="ALTO GODOY">ALTO GODOY</option>
             <option value="Casa Central">CASA CENTRAL</option>
             <option value="ESTABLECIMIENTO POTABILIZADOR BENEGAS">ESTABLECIMIENTO POTABILIZADOR BENEGAS</option>
             <option value="ESTABLECIMIENTO POTABILIZADOR LUJAN I">ESTABLECIMIENTO POTABILIZADOR LUJAN I</option>
@@ -112,6 +124,31 @@
             <option value="OFICINA COMERCIAL LAS HERAS">UNIDAD OPERATIVA LAS HERAS</option>
             <option value="UNIDAD OPERATIVA GUAYMALLEN">UNIDAD OPERATIVA GUAYMALLÉN</option>
             <option value="VILLA DEL PARQUE">VILLA DEL PARQUE</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, seleccione un departamento.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom04" class="form-label">Respecto a que tubo inconvenientes</label>
+          <select class="form-select animate__animated animate__bounceIn" name="errores" id="validationCustom04"
+            required>
+            <option selected disabled value="">Opción...</option>
+            <option value="INTERNET">INTERNET</option>
+            <option value="IMPRESORAS/ESCANER">IMPRESORAS/ESCANER</option>
+            <option value="MENU SISTEMAS">MENÚ SISTEMAS</option>
+            <option value="CORREO/OUTLOOK">CORREO/OUTLOOK</option>
+            <option value="SAYGES">SAYGES</option>
+            <option value="ANTIVIRUS/SHOPOS">ANTIVIRUS/SHOPOS</option>
+            <option value="TECLADO/MOUSE">TECLADO/MOUSE</option>
+            <option value="INSTALAR/DESISNTALAR UN PROGRAMA">INSTALAR/DESISNTALAR UN PROGRAMA</option>
+            <option value="ZOOM">ZOOM</option>
+            <option value="BLOQUEO DE USUARIO">BLOQUEO DE USUARIO</option>
+            <option value="JD EDWARDS">JD EDWARDS</option>
+            <option value="JD EDWARDS">TRASLADO DE EQUIPO</option>
+            <option value="JD EDWARDS">RENOVACIÓN DE EQUIPO</option>
+            <option value="CONFIGURACIÓN DE EQUIPO">CONFIGURACIÓN DE EQUIPO</option>
+            <option value="OTRO">OTRO</option>
           </select>
           <div class="invalid-feedback">
             Por favor, seleccione un departamento.
